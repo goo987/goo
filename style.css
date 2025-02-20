@@ -104,12 +104,33 @@ body{
     text-transform: uppercase;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0 0 25px whitesmoke;
     transition: all 0.3s ease-in-out;
 }
 
-.content button:hover {
-    box-shadow: 0 0 50px whitesmoke;
+.content a {
+    display: inline-flex; /* saya ganti ke inline flex biar buttonnya tetep sejajar sama teksnya */
+    align-items: center; /* saya tambahin ini biar teksnya tetap ditengah secara verti */
+    justify-content: center; /* sama kaya yang atas, cmn klo ini biar hori  */
+    text-align: center;
+    max-width: 10rem;
+    min-width: 9rem;
+    padding: 12px 24px;
+    background: transparent;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid var(--color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    margin-top: 10px;
+    line-height: 1.2; /* biar ngga keliatan renggang */
+    white-space: nowrap; /* biar textnya ngga turun kebawah*/
+}
+
+.content a:hover {
+    box-shadow: 0 0 50px var(--color);
 }
 
 
@@ -151,4 +172,52 @@ body{
     background: black;
     color: #fff;
     box-shadow: 0 0 40px whitesmoke;
+}
+
+.dr-strange{
+    --color: #ffffff;
+    --text-color: red;
+}
+
+.spdr-man{
+    --color: #1E90FF;
+    --text-color: black;
+}
+
+.thor{
+    --color: cyan;
+    --text-color: #D1E8E2;
+}
+
+.iron-man{
+    --color: #B8860B;
+    --text-color: #BDB76B;
+}
+
+.capt{
+    --color: grey;
+    --text-color: darkblue;
+}
+
+
+.text-var{
+    color: var(--color);
+}
+
+.content-var{
+    color: var(--text-color);
+    font-size: 20px; 
+    font-weight: bold; 
+    cursor: text;
+}
+
+.shadow-var{
+    box-shadow: 0 0 25px var(--color);
+    color: var(--color);
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.shadow-var:hover{
+    color: var(--text-color);
 }
