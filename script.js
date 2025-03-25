@@ -12,11 +12,11 @@ prev.addEventListener('click', function () {
     document.querySelector('.slide').prepend(items[items.length - 1]);
 });
 
-//slide otomatis setiap 10 detik
-// setInterval(() => {
-//     let items = document.querySelectorAll('.item');
-//     document.querySelector('.slide').appendChild(items[0]);
-// }, 10000);
+// slide otomatis setiap 10 detik
+setInterval(() => {
+    let items = document.querySelectorAll('.item');
+    document.querySelector('.slide').appendChild(items[0]);
+}, 10000);
 
 buttons.forEach((button, index) => {
     button.addEventListener('click', () => {
